@@ -2,6 +2,6 @@ a = 8
 b = 10
 
 if a >= b:
-    print('True')
+    print('Greater than B')
 else:
-    print('False')
+    print('Less than B')
