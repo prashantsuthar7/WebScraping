@@ -8,6 +8,7 @@ dst_path = "C:/Users/prash/Downloads/testmove"
 
 # Get the latest file in the source folder
 text_files = [f for f in os.listdir(src_path) if f.endswith(".txt")]
+print(text_files)
 if text_files:
     latest_file = max(text_files, key=lambda f: os.path.getmtime(os.path.join(src_path, f)))
     # Construct the full path to the latest file
