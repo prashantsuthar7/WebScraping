@@ -1,3 +1,4 @@
+#copy top two lasted files from source folder and combine as excel save in destination folder
 import os
 import glob
 import pandas as pd

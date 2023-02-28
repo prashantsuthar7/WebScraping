@@ -3,11 +3,13 @@ import pyodbc
 
 
 # Connect to the SQL database using SQL authentication
-conn = pyodbc.connect("Driver={SQL Server};Server=LAPTOP-SOF46G0M;Database=AdventureWorks2019;")
+conn = pyodbc.connect("Driver={SQL Server};"
+                      "Server=LAPTOP-SOF46G0M;"
+                      "Database=AdventureWorks2019;")
 cursor = conn.cursor()
 
 # Query the database to get the values you want
-query = "select top 1 SS.UnitPrice From Sales.SalesOrderDetail SS where coNVERT(Date,  SS.ModifiedDate) ='2011-06-13'"
+query = "select top 2 SS.UnitPrice From Sales.SalesOrderDetail SS where coNVERT(Date,  SS.ModifiedDate) ='2011-06-13'"
 cursor.execute(query)
 rows = cursor.fetchall()
 
@@ -27,7 +29,7 @@ else:
 #     mail = outlook.CreateItem(0)
 #     mail.To = "recipient@example.com"
 #     mail.Subject = "Orders with a sum of 0"
-#     message = "The following orders have a sum of 0:\n"
+#     message = "The following orders hadzzve a sum of 0:\n"
 #     for row in rows:
 #         message += f"Price: {row[0]}, Unit Price: {row[1]}\n"
 #     mail.Body = message
