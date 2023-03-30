@@ -1,3 +1,6 @@
+##This APP use to select source folder SQL querys one by one and export into excel with dest folder
+## with shwing progress bar
+
 import os
 import pyodbc
 import pandas as pd
